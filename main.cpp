@@ -23,7 +23,22 @@ int main()
 
     // Task B:  Counting blocks opened and closed by { and }, and adding real indentation
 
-    
+    fin.open("awful-code.cpp");
+    std::cout << "Task B: Counting blocks of { and } with real indentation \n\n";
+
+    int outBrace = 0;
+    int insideBrace = 0;
+    while(getline(fin,line))
+    {
+        insideBrace = countChar(line, '}') + insideBrace;
+        std::string styledWithIndentation = removeLeadingSpaces(line);
+        std::cout << properIndent(styledWithIndentation, outBrace, insideBrace) << std::endl;
+        outBrace = countChar(line, '{') + outBrace;
+
+
+    }
+    fin.close();
+    std::cout << "\n------------------\n"; // seperator
 
     return 0;
 }
