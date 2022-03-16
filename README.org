@@ -6,7 +6,7 @@
 
 * GitHub username: George-Sucuzhanay
 
-* Notes:
+* Notes: For testing run in the terminal make => ./main < awful-code.cpp
 
 
   
