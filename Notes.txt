@@ -1,0 +1,7 @@
+Comments:
+- implement using for loops instead of if while loop (less to code)
+- countChar func implement a for loop instead of while loop for efficiency
+- else in while loop is not neccesarily needed
+- working on indentation from the bad-code.cpp to indent within the opening curly bracker
+
+

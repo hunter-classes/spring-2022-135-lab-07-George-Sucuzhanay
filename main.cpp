@@ -39,6 +39,18 @@ int main()
     }
     fin.close();
     std::cout << "\n------------------\n"; // seperator
+    fin.open("awful-code_2.cpp");
+    std::cout << "Task C: Testing function for branch" << std::endl;
+    outBrace = 0;
+    insideBrace = 0;
+    while(getline(fin,line))
+    {
+        insideBrace = countChar(line, '}') + insideBrace;
+        std::string styledWithIndentation = removeLeadingSpaces(line);
+        std::cout << properIndent(styledWithIndentation, outBrace, insideBrace) << std::endl;
+        outBrace = countChar(line, '{') + outBrace;
+    }
+    fin.close();
 
     return 0;
 }
