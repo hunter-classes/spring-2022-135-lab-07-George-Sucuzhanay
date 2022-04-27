@@ -1,7 +1,7 @@
 #include <iostream>
 #include "styling.h"
 
-std::string removeLeadingSpaces(std::string str)
+std::string removeLeadingSpaces(std::string str) // instead of there being an isspace(c) used there is a for loop looking for somthing that is not an empty space
 {
     std::string output = "";
     int sl = str.length();
