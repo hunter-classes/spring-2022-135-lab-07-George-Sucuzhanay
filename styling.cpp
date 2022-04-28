@@ -1,22 +1,29 @@
 #include <iostream>
 #include "styling.h"
 
-std::string removeLeadingSpaces(std::string line)
+std::string removeLeadingSpaces(std::string str) // instead of there being an isspace(c) used there is a for loop looking for somthing that is not an empty space
 {
-    std::string result;
-    
-    int i = 0;
-    if(isspace(line[i]))
+    std::string output = "";
+    int sl = str.length();
+    int ns = 0; // ns stands for No Space
+    for (int i = 0; i != sl; i++)
     {
-        while (isspace(line[i]))
+        if (str[i] != ' ')
         {
-            i++;
+        ns = i;
+        break;
         }
     }
-    
-    result = line.substr(i);
-    return result;
-}
+
+    for (int j = ns; j != sl; j++)
+    {
+        output += str[j];
+    }
+
+    return output;
+
+
+} 
 
 int countChar(std::string line, char c)
 {
